@@ -28,7 +28,6 @@ export class HeaderComponent implements OnInit {
     this.atual =
       JSON.parse(sessionStorage.getItem('pagina') as string)?.pagina ||
       '/inicio';
-    if (this.atual == '/inicio') this.router.navigate(['/inicio']);
   }
   getListHeader = () => {
     this.listHeader = listHeader;
