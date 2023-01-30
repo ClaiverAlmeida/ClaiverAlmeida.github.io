@@ -1,0 +1,78 @@
+@use "./_variables.scss" as bs-color;
+
+$sizes: (
+    "": 0px,
+    "-md": 798px,
+);
+$total-border: 10;
+$total-flex: 10;
+$total-border-radius: 100;
+
+$sides: (
+    "": "",
+    "-bottom": "-bottom",
+    "-top": "-top",
+    "-left": "-left",
+    "-right": "-right",
+);
+
+@each $sizename, $sizevalue in $sizes {
+    @each $name, $value in bs-color.$cacolors {
+        .ca-color#{"" + $sizename}#{"-" + $name} {
+            @media (min-width: $sizevalue) {
+                color: $value !important;
+
+                &:hover {
+                    color: $value;
+                }
+            }
+        }
+
+        .ca-bg-color#{"" + $sizename}#{"-" + $name} {
+            @media (min-width: $sizevalue) {
+                background-color: $value !important;
+            }
+        }
+
+        .ca-bg-hover#{"" + $sizename}#{"-" + $name}:hover {
+            @media (min-width: $sizevalue) {
+                background-color: $value !important;
+            }
+        }
+
+        .ca-border-color#{"" + $sizename}#{"-" + $name} {
+            @media (min-width: $sizevalue) {
+                border-color: $value !important;
+            }
+        }
+    }
+
+    @each $side, $sideV in $sides {
+        @for $i from 0 through $total-border {
+            .ca-border#{"" + $side}#{"" + $sizename}#{"-" + $i} {
+                @media (min-width: $sizevalue) {
+                    border#{"" + $side}-width: #{$i}px;
+                    border#{"" + $side}-style: solid;
+                }
+            }
+        }
+    }
+
+    @each $side, $sideV in $sides {
+        @for $i from 0 through $total-border-radius {
+            .ca-border-radius#{"" + $sizename}#{"-" + $i} {
+                @media (min-width: $sizevalue) {
+                    border-radius: #{$i}px;
+                }
+            }
+        }
+    }
+
+    @for $i from 0 through $total-flex {
+        .ca-flex#{"" + $sizename}#{"-" + $i} {
+            @media (min-width: $sizevalue) {
+                flex: $i;
+            }
+        }
+    }
+}

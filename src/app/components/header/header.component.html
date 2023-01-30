@@ -1,0 +1,34 @@
+<div class="header d-block d-md-none">
+  <app-ca-button-header (click)="toggleSidebar()" icon="pi-bars">
+  </app-ca-button-header>
+  <div class="navigation-header" id="navigationHeader" #navigationHeader>
+    <i
+      class="pi-times pi ca-color-purple pt-2 pb-5"
+      (click)="toggleSidebar()"
+      role="button"
+    ></i>
+    <div
+      *ngFor="let item of listHeader"
+      class="ca-color-purple col-12 text-center"
+      role="button"
+      (click)="toggleSidebar()"
+      [routerLink]="item.rota"
+    >
+      <p class="px-2 p-3 title">{{ item.title }}</p>
+      <div class="{{ item.rota == atual ? 'selecionado' : '' }}"></div>
+    </div>
+  </div>
+</div>
+<div class="header d-none d-md-block">
+  <div class="nagivation-header">
+    <div *ngFor="let item of listHeader">
+      <app-ca-button-header
+        (click)="paginaAtual(item.rota)"
+        [routerLink]="item.rota"
+        [title]="item.title"
+        [ordem]="item.ordem"
+      ></app-ca-button-header>
+      <div class="{{ item.rota == atual ? 'selecionado' : '' }}"></div>
+    </div>
+  </div>
+</div>

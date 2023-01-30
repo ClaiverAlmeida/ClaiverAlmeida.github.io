@@ -1,0 +1,42 @@
+.w-full {
+    width: 100%;
+}
+.w-md-auto {
+    @media only screen and (min-width: 769px) {
+        width: auto;
+    }
+}
+
+.h-full {
+    height: 100%;
+}
+.max-w-full {
+    max-width: 100%;
+}
+.max-h-full {
+    max-height: 100%;
+}
+.w-vw-full {
+    width: 100vw;
+}
+.h-vh-full {
+    height: 100vh;
+}
+.obj-fit-cover {
+    object-fit: cover;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.w-side-responsive {
+    width: 85% !important;
+
+    @media only screen and (min-width: 999px) and (max-width: 1480px) {
+        width: 80% !important;
+    }
+
+    @media only screen and (max-width: 999px) {
+        width: 100% !important;
+    }
+}

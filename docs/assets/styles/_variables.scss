@@ -1,0 +1,39 @@
+$white: #fff;
+$gray: gray;
+$dark: rgb(19, 19, 19);
+$dark1: rgb(39, 39, 39);
+$dark2: #2d2d2d;
+$dark3: #414141;
+$dark4: #1c1c1c;
+$dark5: #343434;
+$purple: #9580ff;
+$purple1: rgb(100, 81, 196);
+$purple2: rgb(79, 65, 150);
+$purple3: rgb(52, 43, 99);
+$purple4: rgb(29, 23, 54);
+$transparent: transparent;
+$primary: #9580ff;
+$secundary: rgb(100, 81, 196);
+$tertiary: rgb(79, 65, 150);
+$body: rgb(19, 19, 19);
+
+$cacolors: (
+  white: $white,
+  gray: $gray,
+  dark: $dark,
+  dark1: $dark1,
+  dark2: $dark2,
+  dark3: $dark3,
+  dark4: $dark4,
+  dark5: $dark5,
+  purple: $purple,
+  purple1: $purple1,
+  purple2: $purple2,
+  purple3: $purple3,
+  purple4: $purple4,
+  transparent: $transparent,
+  primary: $primary,
+  secundary: $secundary,
+  tertiary: $tertiary,
+  body: $body,
+);

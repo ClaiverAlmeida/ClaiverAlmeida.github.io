@@ -1,0 +1,68 @@
+.app-loading {
+  position: fixed;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: $body;
+  // opacity: 0.8;
+  .spinner {
+    height: 200px;
+    width: 200px;
+    transform-origin: center center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    background-image: url("../../img/emoji/ca-icon.PNG");
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: rotate 3s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(0); /* tamanho inicial */
+  }
+  25% {
+    transform: rotate(90deg) scale(5); /* tamanho final */
+  }
+  50% {
+    transform: rotate(180deg) scale(1); /* tamanho inicial */
+  }
+  75% {
+    transform: rotate(270deg) scale(8); /* tamanho final */
+  }
+  100% {
+    transform: rotate(360deg) scale(0); /* tamanho inicial */
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}

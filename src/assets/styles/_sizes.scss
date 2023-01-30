@@ -1,0 +1,26 @@
+$total-size: 1000;
+$sizes: (
+    "": 0px,
+    "-md": 768px,
+    "-lg": 992px,
+
+);
+@each $size, $sizevalue in $sizes {
+    @for $i from 0 through $total-size {
+        @media (min-width: $sizevalue) {
+            .ca-h#{"" + $size}-#{$i} {
+                height: #{$i}px;
+            }
+            .ca-max-h#{"" + $size}-#{$i} {
+                max-height: #{$i}px;
+            }
+            .ca-w#{"" + $size}-#{$i} {
+                width: #{$i}px;
+            }
+            .ca-fs#{"" + $size}-#{$i} {
+                font-size: #{$i}px;
+                line-height: #{$i}px;
+            }
+        }
+    }
+}

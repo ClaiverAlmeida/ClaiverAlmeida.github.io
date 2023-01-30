@@ -1,0 +1,24 @@
+<div class="layout-container">
+  <div class="row">
+    <span class="title ca-color-white fs-3">Oi, eu sou</span>
+    <p class="ondas-de-palavras">
+      <span
+        >{{ dados.nome }}.<label class="ondas-de-palavras-barra">|</label>
+      </span>
+      <span
+        >{{ dados.nome }}.<label class="ondas-de-palavras-barra">|</label>
+      </span>
+    </p>
+    <div class="p-ondas">
+      <span class="title ca-color-white fs-3">{{ dados.cargo }}</span>
+    </div>
+    <button type="button" class="btn-main col-12">
+      <a [href]="dados.linkedin" target="_blank" class="btn-link">Linkedin</a>
+    </button>
+    <button type="button" class="btn-main col-12">
+      <a [href]="dados.repositorio" target="_blank" class="btn-link"
+        >Rep. GitHub
+      </a>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+.btn-link {
+  font-size: 25px;
+  text-align: center;
+  padding: 12px 0;
+  color: $dark;
+  text-decoration: none;
+  transition: ease-in-out 1s;
+}
+
+.btn-link:hover {
+  letter-spacing: 5px;
+  color: $dark;
+  text-decoration: none;
+}
+
+.btn-main {
+  margin-top: 30px;
+  background-color: $purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: ease-in-out 1s;
+}
+
+.btn-main:hover {
+  transition: ease-in-out 1s;
+  border-radius: 40px;
+}
+
+
+.btn-main a {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .btn-link {
+    font-size: 15px;
+  }
+
+}
+@media (max-height: 450px) {
+  .btn-main {
+    margin-top: 15px;
+  }
+
+}

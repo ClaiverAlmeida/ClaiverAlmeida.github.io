@@ -1,0 +1,25 @@
+
+<div class="layout-container  ca-color-gray px-5">
+  <div class="row ">
+    <div
+      class="col-12 col-lg-6 col-xxl-4 mt-5"
+      *ngFor="let item of [0, 3, 8, 2, 4, 1]; let i = index"
+    >
+      <p> {{ i != 0 ? "Em Desenvolvimento - __/__/__" : "Portfólio - 15/03/2023" }}</p>
+      <div role="button"
+        class="border border-3 border-dark ca-h-250 d-flex justify-content-center align-items-center projeto"
+      >
+        <img
+          [src]="sobreMim.images[item]"
+          [ngStyle]="{
+            'object-fit': 'contain',
+            height: '110%',
+            width: '90%',
+            filter: 'drop-shadow(15px 15px 15px #222)'
+          }"
+          class="w-full d-block "
+        />
+      </div>
+    </div>
+  </div>
+</div>

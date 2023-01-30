@@ -1,0 +1,52 @@
+<div class="container-curriculo pt-3 ca-color-gray fs-6">
+  <div class="row">
+    <div class="col-12">
+      <div class="ondas-de-palavras row">
+        <span class="text-truncate col-11 col-lg-9"
+          >Claiver Almeida de Araujo</span
+        >
+        <span class="text-truncate col-11 col-lg-9"
+          >Claiver Almeida de Araujo</span
+        >
+      </div>
+    </div>
+    <div class="pt-4 col-12 ca-color-white">
+      <div class="pt-5">
+        <p class="title ca-color-white fs-2">Pleno Fullstack</p>
+      </div>
+      <div class="d-flex justify-content-between pt-2 pb-4">
+        <span>(11) 9 7073-6987</span>
+        <span>claiveralmeida@gmail.com </span>
+      </div>
+    </div>
+    <div *ngFor="let item of curriculo" class="col-12">
+      <div class="title ca-color-white fw-bold title-curriculo">
+        {{ item.title }}
+      </div>
+      <div class="descricao pb-3">
+        <p
+          class="title ca-color-white fs-5 {{ item.period ? 'pt-3' : '' }}"
+          [innerText]="item.period || ''"
+        ></p>
+        <p
+          class="{{ item.description ? 'pt-3' : '' }}"
+          [innerText]="item.description || ''"
+        ></p>
+        <div *ngFor="let xp of item.professionalExperience">
+          <p
+            class="title ca-color-white fs-5  {{ xp.office ? 'pt-3' : '' }}"
+            [innerText]="xp.office || ''"
+          ></p>
+          <p
+            class="title ca-color-white fs-5   {{ xp.company ? 'pt-1' : '' }}"
+            [innerText]="xp.company || ''"
+          ></p>
+          <p
+            class="{{ xp.description ? 'pt-3' : '' }}"
+            [innerText]="xp.description || ''"
+          ></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.p-galleria .p-galleria-item-nav:not(.p-disabled):hover {
+  background: rgba(255, 255, 255, 0);
+}
+.p-galleria .p-galleria-item-nav .p-galleria-item-prev-icon,
+.p-galleria .p-galleria-item-nav .p-galleria-item-next-icon {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0);
+}
+.projeto {
+  img:hover {
+    scale: 1.2;
+    transition: ease-in-out 0.4s;
+  }
+  img {
+    scale: 1;
+    cursor: pointer;
+    transition: ease-in-out 4s;
+  }
+}

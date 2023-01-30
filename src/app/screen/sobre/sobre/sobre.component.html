@@ -1,0 +1,59 @@
+<div class="layout-container ca-color-gray">
+  <div class="row mx-1 mx-sm-5">
+    <div class="ondas-de-palavras col-12 pb-5">
+      <span>Sobre mim. </span>
+      <span>Sobre mim.</span>
+    </div>
+    <div class="col-12 col-md-6 col-lg-6 col-xxl-4 pt-5">
+      <p-galleria
+        [value]="sobreMim.images"
+        [numVisible]="5"
+        [circular]="true"
+        [showItemNavigators]="true"
+        [showThumbnails]="false"
+        [autoPlay]="true"
+        [transitionInterval]="2000"
+        [containerStyle]="{ 'max-width': '100%', cursor: 'default' }"
+      >
+        <ng-template pTemplate="item" let-img>
+          <img
+            [src]="img"
+            [ngStyle]="{
+              'object-fit': 'cover',
+              height: '80%',
+              width: '80%',
+              filter: 'drop-shadow(15px 15px 15px #222)'
+            }"
+            class="w-full d-block"
+          />
+        </ng-template>
+      </p-galleria>
+    </div>
+    <div class="col-12 col-md-6 col-lg-6 col-xxl-4 pt-5">
+      <label class="text-center" [innerHTML]="sobreMim.description"> </label>
+    </div>
+    <div class="col-12 col-xxl-4 py-5">
+      <p class="title ca-color-white fs-4 fw-bold">Bio</p>
+
+      <div class="ps-3 my-3 fst-italic border-start border-3 border-white">
+        <span [innerText]="sobreMim.bio"></span>
+      </div>
+      <div class="title ca-color-white fs-4 fw-bold pb-2">Carreira</div>
+      <div *ngFor="let dados of sobreMim.carreira" class="py-1">
+        <p class="fs-6 ca-color-white">{{ dados.cargo }}</p>
+        <p>
+          <a
+            [href]="dados.hrefEmpresa"
+            target="_blank"
+            class="ca-color-white me-2"
+            >{{ dados.empresa }}
+          </a>
+          {{ dados.local }}
+        </p>
+        <label>
+          {{ dados.experiencia }}
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

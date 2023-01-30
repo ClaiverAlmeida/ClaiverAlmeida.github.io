@@ -1,0 +1,46 @@
+.title {
+  font-size: 26px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.fw-bold {
+  font-weight: bold;
+}
+
+.name {
+  font-size: 20px;
+}
+@media (max-width: 992px) {
+  .title {
+    font-size: 15px;
+  }
+}
+body {
+  background-color: $body;
+  font-family: cursive;
+  min-height: 100vh;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+p,
+span:not(.p-tag-value, .pi),
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  color: $purple;
+}
+
+.text-justify {
+  text-align: justify;
+}
