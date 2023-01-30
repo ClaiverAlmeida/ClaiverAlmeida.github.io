@@ -8,7 +8,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./screen/screens.modules').then((x) => x.ScreensModule),
   },
-  { path: '**', redirectTo: 'inicio' },
+  // { path: '**', redirectTo: 'inicio' },
 ];
 
 @NgModule({
